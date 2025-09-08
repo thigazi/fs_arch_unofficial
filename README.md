@@ -1,18 +1,14 @@
 # fs_arch_unofficial
 Fresswitch PBX for Arch Linux (unofficial) package
-This is the unofficial freeswich build.
+This is the unofficial freeswich build based on [Freeswitch Artch Linux AUR Repository](https://aur.archlinux.org/packages/freeswitch) from Korynkai, thx.
 
-To add this repository you will have to add my PGP key which you can fetrch via DNS with the following command:
+These builds are therfor also under the MPL 2.0 License published, as the sourcecode from the creator.
+
 to make use of this repository you will have 1st to to import my GPG public key in pacman which is done as (root):
 
-    sudo pacman-key --recv-key A39D375C947A2F33
+    pacman-key --recv-key A39D375C947A2F33
 
-If the keyserver is under which conditiotns is not reachable, it can be grabbed via dig directly:
-
-
-
-
-These modules arer compiled and can be used without any problems:
+These modules are available in this FS build:
 
     applications/mod_cidlookup
     applications/mod_directory
