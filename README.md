@@ -8,7 +8,12 @@ to make use of this repository you will have 1st to to import my GPG public key 
 
     pacman-key --recv-key A39D375C947A2F33
 
-These modules are available in this FS build:
+To make use of this repository you will have to add to the /etc/pacman.conf following 2 lines:
+
+    [fs-repo]
+    Server = https://github.com/thigazi/fs_arch_unofficial/raw/refs/heads/main/x64/
+
+These modules are available in this FS build, for further modules that should be implemented please open an issue:
 
     applications/mod_cidlookup
     applications/mod_directory
