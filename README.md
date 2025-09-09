@@ -8,10 +8,20 @@ to make use of this repository you will have 1st to to import my GPG public key 
 
     pacman-key --recv-key A39D375C947A2F33
 
-To make use of this repository you will have to add to the /etc/pacman.conf following 2 lines:
+or in case the "ubuntu keyserver" is not reachable (under what reason soever), you might fetch the key via DNSSEC (which required that your ISP resolver has dnssec enabled), otherwise change your ISP dns resolver to "1.1.1.1"
+
+    gpg --homedir /etc/pacman.d/gnupg --auto-key-locate nodefault,dane --locate-keys th80@s4us.info
+
+Then you need to trust this imported key, otherwise pacman will reject the repo:
+
+    pacman-key --lsign-key A39D375C947A2F33
+
+After successfully importing and signing (trusting) the key we need to add the repository in  /etc/pacman.conf with the following 2 lines:
 
     [fs-repo]
     Server = https://github.com/thigazi/fs_arch_unofficial/raw/refs/heads/main/x64/
+
+and run "pacman -Syu"
 
 These modules are available in this FS build, for further modules that should be implemented please open an issue:
 
