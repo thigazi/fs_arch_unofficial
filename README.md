@@ -10,7 +10,7 @@ to make use of this repository you will have 1st to to import my GPG public key 
 
 or in case the "ubuntu keyserver" is not reachable (under what reason soever), you might fetch the key via DNSSEC (which required that your ISP resolver has dnssec enabled), otherwise change your ISP dns resolver to "1.1.1.1"
 
-    gpg --homedir /etc/pacman.d/gnupg --auto-key-locate nodefault,dane --locate-keys th80@s4us.info
+    gpg --homedir /etc/pacman.d/gnupg --auto-key-locate clear,nodefault,dane --locate-keys th80@s4us.info
 
 Then you need to trust this imported key, otherwise pacman will reject the repo:
 
